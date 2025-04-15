@@ -1,0 +1,65 @@
+/* Estilos específicos para la verificación de código */
+.verificacion-form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.verificacion-form h2 {
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.verificacion-form p {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.code-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.code-inputs input {
+    width: 40px;
+    height: 50px;
+    text-align: center;
+    font-size: 24px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-family: monospace;
+}
+
+.code-inputs input:focus {
+    border-color: #00a59c;
+}
+
+.timer {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #d70b79;
+    font-weight: bold;
+}
+
+.verificacion-form button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: #00a59c;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.verificacion-form button:hover {
+    opacity: 0.9;
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maxium-scale=1.0,
+    minimun-scale=1.0">
+    <title>SISTEMA HELPDESK - Items</title>
+
+    <script src="https://kit.fontawesome.com/cebcede8ce.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../css/principal.css">
+    <link rel="stylesheet" href="../css/creacion.css">
+</head>
+<body>
+    <!--HEADER - MENU-->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="../img/Logos/tsj_logo.png" alt="" width="170" height="70" >
+                <h1>TSJ <b>Zapopan</b></h1>
+            </div>
+
+            <div class="menu" id="show-menu">
+               
+                <nav>
+                    <ul>
+                        <li><a href="#"> <i class="fa-solid fa-house-chimney-window"></i> Inicio</a></li>
+                        <li><a href="#"> <i class="fa-regular fa-folder-open"></i> Items</a></li>
+                        <li class="menu-selected"><a href="#" class="text-menu-selected"> <i class="fa-solid fa-border-all"></i> Areas</a></li>
+                        <li><a href="#"> <i class="fa-solid fa-graduation-cap"></i> Salones</a></li>
+                        <li><a href="#"> <i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar Sesión</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </div>
+
+
+        <div id="icon-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+    </header>
+    
+    <!--PORTADA-->
+
+    <div class="container-all" id="move-content">
+
+    <div class="items-container-cover">
+        <div class="container-info-cover">
+            <h1>¡Bienvenido a tu HelpDesk Escolar!</h1>
+            <p>Somos tu recurso para resolver problemas técnicos en tu institución.
+                Como parte de la Red TSJ,estamos compremetidos con la innovación y el apoyo,
+                a los 15 campus del Estado de Jalisco.
+            </p>
+        </div>
+    </div>
+
+    <div class="posts">
+        <div class="post">
+            <div class="ctn-img">
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenedor para creacion de Planteles -->
+
+    <div class="container">
+        <button id="wheel-button" class="wheel-button">
+            <img src="../img/Logos/timon.png" alt="Timón" class="wheel-image">
+        </button>
+        <div class="options-container" id="optionsContainer">
+            <button class="option" onclick="showInstitutionForm()">Crear Institución</button>
+        </div>
+     </div>
+     <!-- Formato para creacion de Planteles -->
+     <div class="form-container" id="formContainer">
+        <div class="form-content">
+            <h2>Crear Institución</h2>
+            <form id="institutionForm">
+                <label for="plantelName">Nombre del Plantel</label>
+                <input type="text" id="plantelName" required>
+
+                <label for="city">Ciudad</label>
+                <input type="text" id="city" required>
+
+                <button type="submit">Crear Carpeta</button>
+                <button type="button" class="cancel-btn" onclick="hideForm()">Cancelar</button>
+            </form>
+        </div>
+    </div>
+    <!-- esultado de la Creación-->
+    <div id="result"></div>
+
+    <!-- PIE DE PÁGINA: Información final y enlaces -->
+    <div class="container-footer">
+        <footer>
+            <!-- PIE DE PÁGINA: Logo Central-->
+            <div class="logo-footer">
+                <img src="../img/Logos/tecnologico-superior-jalisco.png" alt="">
+            </div>
+            <!-- PIE DE PÁGINA: Redes Sociales-->
+            <div class="redes-footer">
+                <a href="#"><i class="fa-brands fa-facebook icon-redes-footer"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram icon-redes-footer"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok icon-redes-footer"></i></a>
+            </div>
+            <!-- PIE DE PÁGINA: Derechos Reservados -->
+           <hr>
+           <h4> &copy; 2024 Instituto Tecnologico Superior de Jalisco - Todos los Derechos Reservados</h4>
+
+            <div class="logo-footer-izquierdo">
+                <img src="assets/img/Logos/tsj_logo_inferior.png" alt="Logo Footer" style="width: 20px; height: auto;">
+            </div>
+
+
+            <!-- PIE DE PÁGINA: logo inferior Izquierdo-->
+           <div class="logo-footer-izquierdo">
+           <img src="../img/Logos/tsj_logo_inferior.png" alt="Logo Footer" style="width: 200px; height: auto;">
+           </div>
+        </footer>
+    </div>
+
+    <!--Creacion de Items-->
+
+
+
+    <!--Js Para funcion de los Formatos-->
+    <script src="../Pruebas/script.js"></script>
+    <script src="../js/creacion.js"></script>
+</body>
+</html>

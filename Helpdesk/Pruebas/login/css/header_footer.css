@@ -1,0 +1,176 @@
+:root {
+    --primary-color: #00a59c;
+    --background-color: whitesmoke;
+    --text-color: black;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --header-height: 5rem;
+    --footer-height: 4.5rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: var(--footer-height);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    background: var(--background-color);
+    box-shadow: 0 0.25rem 1.5rem var(--shadow-color);
+    z-index: 10;
+}
+
+.header-content {
+    max-width: 75rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 100%;
+    padding: 0 1.25rem;
+}
+
+.logo {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h1 {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 1.5rem;
+}
+
+.logo h1 b {
+    color: var(--primary-color);
+}
+
+.logo img {
+    height: 3.125rem;
+    width: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-right: 0.625rem;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    height: var(--footer-height);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.25rem;
+}
+
+.footer-text {
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+.footer-logo {
+    text-align: right;
+}
+
+.footer-logo img {
+    height: 3.75rem;
+    width: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Media Queries para Responsividad */
+@media screen and (max-width: 768px) {
+    .header-content {
+        padding: 0 0.625rem;
+    }
+    
+    .logo h1 {
+        font-size: 1.25rem;
+    }
+    
+    .logo img {
+        height: 2.5rem;
+    }
+    
+    footer {
+        flex-direction: column;
+        height: auto;
+        padding: 0.625rem;
+    }
+    
+    .footer-text, .footer-logo {
+        text-align: center;
+        margin: 0.3125rem 0;
+    }
+    
+    .footer-logo img {
+        height: 3rem;
+    }
+    
+    body {
+        padding-bottom: 5.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo h1 {
+        font-size: 1rem;
+    }
+    
+    .logo img {
+        height: 2.2rem;
+        margin-right: 0.3125rem;
+    }
+}
+
+/* Accesibilidad - Mejora para alto contraste */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-color: #007570;
+        --background-color: #f8f8f8;
+        --shadow-color: rgba(0, 0, 0, 0.3);
+    }
+    
+    .logo h1 b {
+        font-weight: 800;
+    }
+}
+
+/* Accesibilidad - Reducción de movimiento */
+@media (prefers-reduced-motion: reduce) {
+    .logo img, .footer-logo img {
+        transition: none;
+    }
+    
+    .logo img:hover, .footer-logo img:hover {
+        transform: none;
+    }
+}

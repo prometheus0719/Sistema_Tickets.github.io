@@ -1,0 +1,258 @@
+/* Estilos*/
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+/*Estilos generales*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Ubuntu", serif;
+
+}
+
+/*Login y Register*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    position: relative;
+    overflow: hidden; /* Para evitar scrolls no deseados */
+}
+
+/* Carrusel de imágenes */
+.slider_box {
+    width: 1700px;
+    height: 800px; /* Altura completa de la ventana */
+    overflow: hidden;
+    position: absolute;
+}
+
+.slider_box ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: calc(100 * 4);
+    animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider_box li {
+    width: 100%;
+    list-style: none;
+}
+
+.slider_box img {
+    width: 1700px;
+    height: 800px; /* Ajusta la altura de las imágenes al contenedor */
+    object-fit: cover; /* Mantiene la relación de aspecto */
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }        /* Imagen 1 */
+    20% { transform: translateX(0); }       /* Mantener imagen 1 */
+    
+    25% { transform: translateX(-100%); }   /* Imagen 2 */
+    45% { transform: translateX(-100%); }   /* Mantener imagen 2 */
+    
+    50% { transform: translateX(-200%); }   /* Imagen 3 */
+    70% { transform: translateX(-200%); }   /* Mantener imagen 3 */
+    
+    75% { transform: translateX(-300%); }   /* Imagen 4 */
+    95% { transform: translateX(-300%); }   /* Mantener imagen 4 */
+    
+    100% { transform: translateX(-300%); }  /* Mantener imagen 4 hasta el final */
+}
+
+main {
+    position: absolute; /* Asegura que el main esté por encima del carrusel */
+    top: 0; /* Comienza desde el top */
+    left: 0; /* Alineación izquierda */
+    width: 100%; /* Ocupa todo el ancho */
+    height: 100vh; /* Ocupa toda la altura */
+    display: flex; /* Flexbox para centrar contenido */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    z-index: 10; /* Asegura que esté por encima del carrusel */
+}
+
+
+/* Caja Trasera de Login y Registro */
+.contenedor_todo {
+    width: 100%;
+    max-width: 800px; /* Máximo ancho para el contenedor */
+    margin: auto;
+    position: relative;
+    z-index: 20; /* Asegura que esté por encima */
+    border-radius: 15px; /* Esquinas redondeadas */
+    padding: 20px; /* Espacio interno */
+}
+
+
+/* Caja Trasera */
+.caja_trasera {
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 165, 156, 0.8);
+    margin-bottom: 20px;
+}
+
+.caja_trasera div{
+    margin: 100px 40px;
+    color: whitesmoke;
+    transition: all 500ms;
+}
+
+.caja_trasera div p,
+.caja_trasera div button{
+    margin-top: 30px;
+}
+
+.caja_trasera div h3{
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.caja_trasera button{
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    color: whitesmoke;
+    outline: none;
+    transform: all 300ms;
+}
+
+.caja_trasera button:hover{
+    background: #fff;
+    color: #00a59c;
+}
+
+/*Formulario Register*/
+.contenedor_login-register{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    top: -185px;
+    left: 10px;
+}
+
+.contenedor_login-register form{
+    width: 100%;
+    padding: 80px 20px;
+    background: #fff;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.contenedor_login-register form h2{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #00a59c;
+}
+
+.contenedor_login-register form input{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #f2f2f2;
+    font-size: 16px;
+    outline: none;
+}
+
+.contenedor_login-register form button{
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    font-size: 14px;
+    background: #00a59c;
+    color: whitesmoke;
+    cursor: pointer;
+    outline: none;
+}
+
+/*Formulario Login*/
+.formulario_login{
+    opacity: 1;
+    display: block;
+}
+
+.formulario_register{
+    display: none;
+}
+
+/*Responsive Design*/
+@media screen and (max-width: 850px){
+    
+    main{
+        margin-top: 50px;
+    }
+
+    .caja-trasera{
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .caja-trasera div{
+        margin: 0px;
+        position: absolute;
+    }
+    
+    /*Formularios */
+
+    .contenedor-login-register{
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+
+    .contenedor-login-register form{
+        position: relative;
+    }
+}
+
+
+/* Estilos para pantallas pequeñas*/ 
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .header .nav-links {
+        margin-top: 10px;
+    }
+
+    .header .nav-links li {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .header .btn {
+        margin-top: 10px;
+    }
+
+    .footer-logo {
+        width: 80px;
+    }
+}
+

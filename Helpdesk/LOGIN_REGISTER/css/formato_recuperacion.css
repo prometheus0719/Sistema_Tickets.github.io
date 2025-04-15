@@ -1,0 +1,157 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo del Header */
+  header {
+    background-color: #00a59c;
+    padding: 10px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    height: 80px;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 60px;
+    width: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo img:hover {
+    transform: scale(1.1);
+  }
+  
+  .tsj-text {
+    color: #FFFFFF;
+    margin-left: 20px;
+    font-size: 24px;
+    transition: color 0.3s ease;
+  }
+  
+  .tsj-text:hover {
+    color: #f1c40f;
+  }
+  
+  /* Estilo del Main (Formulario de Recuperación) */
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background-color: #f7f7f7;
+    padding: 20px;
+  }
+  
+  .recuperacion-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .recuperacion-form h2 {
+    margin-bottom: 15px;
+  }
+  
+  .recuperacion-form p {
+    margin-bottom: 20px;
+  }
+  
+  .recuperacion-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+  }
+  
+  .recuperacion-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00a59c;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .recuperacion-form button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Estilo del Footer */
+  .container-footer {
+    background-color: #3A0CA3;
+    padding: 10px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    height: 80px;
+    position: relative;
+  }
+  
+  .container-footer footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .footer_text {
+    color: #FFFFFF;
+    margin-left: 20px;
+    font-size: 24px;
+  }
+  
+  .logo-footer-izquierdo {
+    position: absolute;
+    bottom: -5px;
+    left: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .logo-footer-izquierdo img {
+    height: 60px;
+    width: auto;
+  }
+  
+  .logo-footer-izquierdo:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Estilos Responsivos */
+  @media screen and (max-width: 768px) {
+    header, .container-footer {
+      padding: 10px 15px;
+    }
+    
+    .tsj-text {
+      font-size: 20px;
+    }
+    
+    .logo img {
+      width: 140px;
+    }
+    
+    .container-footer footer {
+      flex-direction: column;
+      text-align: center;
+    }
+  }

@@ -1,0 +1,97 @@
+/* Estilos De letra en general */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+/* Estilos para el encabezado */
+.header {
+    background-color: #00a59c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    padding: 5px 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Logo Superiror */
+.header .logo {
+    cursor: pointer;
+}
+
+.header .logo img {
+    height: 45px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.header .logo img:hover {
+    transform: scale(1.2);
+}
+
+/* Estilos para el pie de página */
+.footer-logo {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+    width: 270px;
+    height: auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.footer-logo:hover {
+    transform: scale(1.2);
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .header .nav-links {
+        margin-top: 10px;
+    }
+
+    .header .nav-links li {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .header .btn {
+        margin-top: 10px;
+    }
+
+    .footer-logo {
+        width: 80px;
+    }
+}
+
+.header .btn button {
+    font-weight: 700;
+    color: #00a59c;
+    padding: 5px 5px;
+    background: #F5F5F5;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover {
+    background-color: #F5F5F5;
+    color: #00a59c;
+    transform: scale(1.1);
+}
